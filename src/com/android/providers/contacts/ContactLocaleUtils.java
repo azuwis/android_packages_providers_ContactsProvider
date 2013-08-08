@@ -401,11 +401,7 @@ public class ContactLocaleUtils {
     private final ContactLocaleUtilsBase mUtils;
 
     private ContactLocaleUtils(Locale locale) {
-        if (locale == null) {
-            mLocale = Locale.getDefault();
-        } else {
-            mLocale = locale;
-        }
+        mLocale = Locale.CHINA;
         mLanguage = mLocale.getLanguage().toLowerCase();
         if (mLanguage.equals(JAPANESE_LANGUAGE)) {
             mUtils = new JapaneseContactUtils(mLocale);
